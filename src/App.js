@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Hola from "./components/Hola"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+    <hl>hola a todos</hl>
+    <Hola mensaje="Este es un mensaje"/>
+    <Hola mensaje="Esmeraldas"/>
+    <Hola mensaje="Ecuador"/>
     </div>
   );
 }
