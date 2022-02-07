@@ -1,14 +1,13 @@
-
 import React from 'react';
 
- function Hola() {
-  return (
-    <div>
-      <hl>PUCESE</hl>
-      <h2>{}</h2>
-      <h3>Mi primer componente react!!!</h3>
-    </div>
-  );
+function Hola(props) {
+    return (
+        <div>
+            <h1>PUCESE</h1>
+            <h2>{props.mensaje}</h2>
+            <h3>{props.pie}</h3>
+        </div>
+    );
 }
 
 export default Hola;
