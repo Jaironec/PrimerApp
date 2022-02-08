@@ -16,9 +16,9 @@ const Valor_Inicial=1;
   return (
     <div>
       <h1>Contador: {cont}</h1>
-      <button onClick={Incrementar}>Incrementar</button>
-      <button onClick={Decrementar}>Descrementar</button>
-      <button onClick={Reset}>Reset</button>
+      <button className='btn btn-success' onClick={Incrementar}>Incrementar</button>
+      <button className='btn btn-success' onClick={Decrementar}>Descrementar</button>
+      <button className='btn btn-danger' onClick={Reset}>Reset</button>
     </div>
   );
 }
