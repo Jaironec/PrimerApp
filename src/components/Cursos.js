@@ -9,6 +9,8 @@ return(
     <div>
         <h2>Listado de cursos</h2>
         <hr/>
+        <Cursoform/>
+        <hr/>
         <ul>
             {
                 cursos.map(item =>(
