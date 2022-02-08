@@ -1,27 +1,34 @@
-import react, {useState} from "react";
+import React, {useState} from 'react';
 
-function CursoFrom(props){
-    const [texto, setTexto]= useState('');
-    const textoIngresadoHandler =() =>{
-        setTexto(event.target.value)
+
+function Cursoform(props) {
+   
+    const [texto, setTexto] = useState('');
+
+    const textoIngresadoHandler=(event)=>{
+        //console.log(event.target.value);
+        setTexto(event.target.value);
     }
-    const agregarCursoHandler=() =>{
+
+    const agregarCursoHandler=(event)=>{
         event.preventDefault();
-        const nuevosCursos={
-            id:Math.floor(Math.random()*10000),
+        const nuevoCurso = {
+            id: Math.floor(Math.random()*10000),
             curso: texto
         }
-        console.log("Enviando formulario ", nuevosCursos);
+        console.log("Enviando formulario: ", nuevoCurso);
     }
-    return(
+
+    return (
         <form onSubmit={agregarCursoHandler}>
-            <input type ='text' 
-            placeholder='Ingresar un nuevo curso'
+            <input type='text' 
+            placeholder='Ingresa un nuevo curso' 
             onChange={textoIngresadoHandler}
-        value ={text}
+            value={texto}
             />
-            <button>Agregar Curso</button>
+            <button>Agregar curso</button>
         </form>
-    )
+    );
 }
-export default CursoFrom;
+
+export default Cursoform;
