@@ -1,27 +1,41 @@
-import React from "react";
+import React from 'react';
+import Cursoform from './Cursoform';
 
-function cursos({cursos, onEliminarCurso}){
-    const eliminarCursoHandler =(id) =>{
-        console.log(id);
-        onEliminarCurso(id);
+
+function Cursos({cursos, onEliminarCursos}) {
+    
+    const eliminarCursoHandler = (id) => {
+        //console.log("eliminado curso de id: ", id);
+        onEliminarCursos(id);
     }
-return(
-    <div>
-        <h2>Listado de cursos</h2>
-        <hr/>
-        <Cursoform/>
-        <hr/>
-        <ul>
-            {
-                cursos.map(item =>(
-                    <li key={item.id}>{item.id} - {item.curso}
-                    <button onClick={()=>eliminarCursoHandler(item.id)}>Eliminar Curso</button>
-                    </li>
-                ))
-            }
 
-        </ul>
-    </div>
-);
+
+    return (
+        <div>
+            <h2>Listado de cursos</h2>
+            <hr/>
+            <Cursoform />
+            <hr/>
+            <ul>
+                {
+                    cursos.map( item => (
+                        <li key={item.id}> {item.id} - {item.curso}
+                            <button onClick={ ()=> eliminarCursoHandler(item.id) }>Eliminar curso</button>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    );
 }
-export default cursos;
+
+/*
+const Cursos = () => {
+    return (
+        <div>
+            <h2>Listado de cursos</h2>
+        </div>
+    );
+}
+*/
+export default Cursos;
